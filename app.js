@@ -4,7 +4,7 @@ var app = Vue.createApp({
         msg: "Hello World",
         man: {
             name: "shakil",
-            age: "25"
+            link: "https://freelancershakil913.blogspot.com"
         }
       };
     }
