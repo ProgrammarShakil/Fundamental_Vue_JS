@@ -10,7 +10,11 @@
 <body>
     
     <div id="app">
-        <h3>{{ getCurrentTime() }}</h3>
+        <p> counter: {{ count }}</p>
+        <!-- <button v-on:click="increament">Increament</button>     // right way -->
+
+        <button v-on:click="increament()">Increament</button>       // also right way
+        <button v-on:click="decreament">Decreament</button>
     </div>
     
     <script src="app.js"></script>

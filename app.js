@@ -1,13 +1,19 @@
 var app = Vue.createApp({
-    
+
     data() {
-      return {}
+      return {
+          count: 0
+      }
     },
 
     methods: {
-        getCurrentTime(){
-            let ct = new Date();
-            return ct;
+
+        increament(){
+        this.count = this.count + 1;
+        },
+
+        decreament(){
+            this.count = this.count - 1;
         }
     }
 
