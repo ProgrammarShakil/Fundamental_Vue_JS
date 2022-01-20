@@ -4,7 +4,8 @@ var app = Vue.createApp({
         msg: "Hello World",
         man: {
             name: "shakil",
-            link: "https://freelancershakil913.blogspot.com"
+            link: "https://freelancershakil913.blogspot.com",
+            htmlCode: "<a href='https://freelancershakil913.blogspot.com'>Linking here</a>"
         }
       };
     }

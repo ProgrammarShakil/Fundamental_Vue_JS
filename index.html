@@ -10,8 +10,8 @@
 <body>
     
     <div id="app">
-        <p> Hello {{ man.name }}</p>
-        <a v-bind:href="man.link">Linking here</a>
+        <p> Hello {{ man.htmlCode }}</p> // wrong way 
+        <p v-html="man.htmlCode"></p>  // right way 
     </div>
     
     <script src="app.js"></script>
