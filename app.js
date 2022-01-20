@@ -1,7 +1,11 @@
 var app = Vue.createApp({
     data() {
       return {
-        msg: "Hello World"
+        msg: "Hello World",
+        man: {
+            name: "shakil",
+            age: "25"
+        }
       };
     }
   });
