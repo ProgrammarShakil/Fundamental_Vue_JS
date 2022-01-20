@@ -8,12 +8,12 @@ var app = Vue.createApp({
 
     methods: {
 
-        increament(){
-        this.count = this.count + 1;
+        increament(amount){
+           this.count = this.count + amount;
         },
 
-        decreament(){
-            this.count = this.count - 1;
+        decreament(amount){
+            this.count = this.count - amount;
         }
     }
 
