@@ -5,11 +5,15 @@ const app = Vue.createApp({
         }
     },
     methods: {
-        update() {
-            setTimeout(()=>{
-                this.name = "Suvo"
-            }, 2000)
+        updateName(newName, event) {
+           this.name = newName,
+           console.log(event);
         },
+        eventControl(event){
+            // event.preventDefault();
+            
+            console.log("submitted form")
+        }
     },
 })
 

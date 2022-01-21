@@ -10,9 +10,14 @@
 <body>
     
     <div id="app">
-        <p>{{name}}</p>
-        <p v-once>{{name}}</p>
-        <p>{{update()}}</p>
+
+        <!-- <p>{{name}}</p>
+        <button @click.right="updateName('suvo', $event)">Click</button> --> // Basic Event Modifier //
+
+        <form @Submit.prevent="eventControl">
+            <input type="text">
+            <input type="submit" value="submit">
+        </form>
     </div>
     
     <script src="app.js"></script>
