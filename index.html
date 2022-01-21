@@ -11,13 +11,14 @@
     
     <div id="app">
 
-        <!-- <p>{{name}}</p>
-        <button @click.right="updateName('suvo', $event)">Click</button> --> // Basic Event Modifier //
+        <form @Submit.prevent="getName">
 
-        <form @Submit.prevent="eventControl">
-            <input type="text">
+            <input type="text" v-model="formData.firstName">
+            <input type="text" v-model="formData.lastName">
+
             <input type="submit" value="submit">
         </form>
+
     </div>
     
     <script src="app.js"></script>
