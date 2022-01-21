@@ -10,22 +10,9 @@
 <body>
     
     <div id="app">
-        <!-- <p v-for='car in cars'>
-            {{car}}
-        </p> -->   // for looping // 
-<!--         
-        <p v-for='(car, index) in cars'>
-            {{index}} : {{car}}
-        </p> --> // for looping with index // 
-
-        <!-- <p v-for='(key, user, index) in users'>
-           {{index}} : {{user}} : {{key}}
-        </p>   --> // for looping with index & key//
-
-        <p v-for='n in 10'>
-            {{n}}
-         </p>  // Number looping //
-
+        <p>{{name}}</p>
+        <p v-once>{{name}}</p>
+        <p>{{update()}}</p>
     </div>
     
     <script src="app.js"></script>

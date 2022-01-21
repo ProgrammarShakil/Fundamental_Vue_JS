@@ -1,32 +1,16 @@
-var app = Vue.createApp({
-
-    data() {
-      return {
-        cars: ['shakil', 'karim', 'jabbar', 'rahim'],
-        users:{
-            name: 'shakil',
-            age: 24,
-            location: 'Dhaka'
+const app = Vue.createApp({
+    data(){
+        return{
+            name: "Shakil"
         }
-      }
     },
-
     methods: {
-
-        increament(event, amount){
-           this.count = this.count + amount;
-           console.log(event)
+        update() {
+            setTimeout(()=>{
+                this.name = "Suvo"
+            }, 2000)
         },
+    },
+})
 
-        decreament(amount){
-            this.count = this.count - amount;
-        },
-        
-        test(event){
-            console.log(event)
-        }
-    }
-
-  });
-  
-  app.mount("#app");
+app.mount('#app');
