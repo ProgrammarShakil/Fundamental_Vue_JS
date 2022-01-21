@@ -8,8 +8,9 @@ var app = Vue.createApp({
 
     methods: {
 
-        increament(amount){
+        increament(event, amount){
            this.count = this.count + amount;
+           console.log(event)
         },
 
         decreament(amount){
