@@ -2,7 +2,10 @@ var app = Vue.createApp({
 
     data() {
       return {
-          count: 0
+          count: 0,
+          allowAge: 21,
+          disAllowAge: 20
+
       }
     },
 

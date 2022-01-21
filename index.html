@@ -19,6 +19,11 @@
         <button @click="decreament(2)">Decreament2</button>
 
         <button @click="test($event)">Get Event</button>
+
+        <div>
+            <p v-if="allowAge >= disAllowAge"> You Are Allowed</p>
+            <p v-else="allowAge <= disAllowAge">You Are Not Allowed</p>
+        </div>
     </div>
     
     <script src="app.js"></script>
