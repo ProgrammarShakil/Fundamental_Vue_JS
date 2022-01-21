@@ -11,13 +11,11 @@
     
     <div id="app">
 
-        <form @Submit.prevent="getName">
+       <button @click="a++">A+</button>
+       <button @click="b--">B-</button>
 
-            <input type="text" v-model="formData.firstName">
-            <input type="text" v-model="formData.lastName">
-
-            <input type="submit" value="submit">
-        </form>
+       <p>{{ aToB }}</p>
+       <p>{{ bToB }}</p>
 
     </div>
     

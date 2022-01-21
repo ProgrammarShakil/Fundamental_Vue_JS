@@ -1,15 +1,19 @@
 const app = Vue.createApp({
     data(){
         return{
-           formData:{
-               firstName: "",
-               lastName: ""
-           }
+            a: 0,
+            b: 0,
+            salary: 10
         }
     },
-    methods: {
-       getName(){
-           console.log(this.formData);
+    computed: {
+      aToB(){
+          console.log('a');
+           return this.a + this.salary
+       },
+       bToB(){
+           console.log('b');
+           return this.b + this.salary
        }
     },
 })
