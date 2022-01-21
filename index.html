@@ -12,11 +12,13 @@
     <div id="app">
         <p> counter: {{ count }}</p>
 
-        <button v-on:click="increament(1)">Increament1</button>     
-        <button v-on:click="decreament(1)">Decreament1</button>
+        <button @click="increament(1)">Increament1</button>     
+        <button @click="decreament(1)">Decreament1</button>
 
-        <button v-on:click="increament(2)">Increament2</button>     
-        <button v-on:click="decreament(2)">Decreament2</button>
+        <button @click="increament(2)">Increament2</button>     
+        <button @click="decreament(2)">Decreament2</button>
+
+        <button @click="test($event)">Get Event</button>
     </div>
     
     <script src="app.js"></script>

@@ -14,6 +14,10 @@ var app = Vue.createApp({
 
         decreament(amount){
             this.count = this.count - amount;
+        },
+        
+        test(event){
+            console.log(event)
         }
     }
 
