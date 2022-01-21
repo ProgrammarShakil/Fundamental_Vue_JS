@@ -2,10 +2,12 @@ var app = Vue.createApp({
 
     data() {
       return {
-          count: 0,
-          allowAge: 21,
-          disAllowAge: 20
-
+        cars: ['shakil', 'karim', 'jabbar', 'rahim'],
+        users:{
+            name: 'shakil',
+            age: 24,
+            location: 'Dhaka'
+        }
       }
     },
 

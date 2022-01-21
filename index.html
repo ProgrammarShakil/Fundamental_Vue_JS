@@ -10,20 +10,22 @@
 <body>
     
     <div id="app">
-        <p> counter: {{ count }}</p>
+        <!-- <p v-for='car in cars'>
+            {{car}}
+        </p> -->   // for looping // 
+<!--         
+        <p v-for='(car, index) in cars'>
+            {{index}} : {{car}}
+        </p> --> // for looping with index // 
 
-        <button @click="increament($event, 1)">Increament1</button>     
-        <button @click="decreament(1)">Decreament1</button>
+        <!-- <p v-for='(key, user, index) in users'>
+           {{index}} : {{user}} : {{key}}
+        </p>   --> // for looping with index & key//
 
-        <button @click="increament(2)">Increament2</button>     
-        <button @click="decreament(2)">Decreament2</button>
+        <p v-for='n in 10'>
+            {{n}}
+         </p>  // Number looping //
 
-        <button @click="test($event)">Get Event</button>
-
-        <div>
-            <p v-if="allowAge >= disAllowAge"> You Are Allowed</p>
-            <p v-else="allowAge <= disAllowAge">You Are Not Allowed</p>
-        </div>
     </div>
     
     <script src="app.js"></script>
