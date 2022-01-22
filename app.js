@@ -1,7 +1,8 @@
 const app = Vue.createApp({
     data(){
         return{
-           activeClass : "red"
+           textColor : "red",
+           background: "yellow"
         }
     },
     methods:{

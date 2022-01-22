@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,16 +10,11 @@
 <body>
 
     <div id="app">
-
-      <button :class="{active: activeClass == 'red', bold: true}"  @click="setClass('red')">Red</button>
-      <button :class="{active: activeClass == 'green', bold:true}" @click="setClass('green')">Green</button>
-      <button :class="{active: activeClass == 'blue', bold: true}" @click="setClass('blue')">Blue</button>
-      <button :class="['bold',{active: activeClass == 'green', bold: true}]">Always Active</button> 
-
-      <div :class="activeClass">
-
+      <input type="text" v-model="background">
+      <input type="color" v-model="background">
+      <div :style="{backgroundColor: background}">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, consequatur! Atque, quaerat iste cupiditate ipsa beatae illo, veritatis dignissimos consectetur amet laborum laboriosam dolores magnam consequuntur repudiandae accusantium et aliquid.
       </div>
-
    </div>
     
     <script src="app.js"></script>
