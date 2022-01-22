@@ -1,21 +1,11 @@
 const app = Vue.createApp({
     data(){
         return{
-            a: 0,
-            b: 0,
-            salary: 10
+            value: "1st"
         }
     },
-    computed: {
-      aToB(){
-          console.log('a');
-           return this.a + this.salary
-       },
-       bToB(){
-           console.log('b');
-           return this.b + this.salary
-       }
-    },
+    template:`<p style="color:red"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos vel necessitatibus quisquam eum laborum, quasi accusamus perferendis nihil cupiditate fuga ipsam aliquid, similique, consequuntur quod repellendus sed tempore vero molestias?</p>`
+   
 })
 
 app.mount('#app');
