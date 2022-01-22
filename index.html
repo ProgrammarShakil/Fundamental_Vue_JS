@@ -9,8 +9,18 @@
 </head>
 <body>
     
+  <!-- Two Way Binding - Has Two Way // <input :value="number" @input="handleInput" type="text">  -->
+
     <div id="app">
-    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos vel necessitatibus quisquam eum laborum, quasi accusamus perferendis nihil cupiditate fuga ipsam aliquid, similique, consequuntur quod repellendus sed tempore vero molestias?</p>
+      <h3>Enter a Number:</h3>
+      <!-- <input :value="number" @input="handleInput" type="text"> <br> <br> -->
+      <input v-model.number="number" type="text"> <br> <br>  <!-- v-model will get string - Make it Interger -->
+      <button @click="getDouble">Get Double</button>
+      <button @click="getSquare">Get Square</button>
+      <button @click="reset">Reset</button>
+
+      <h4>Entered Number:</h4> <b>{{number}}</b>
+      <h4>Entered Result:</h4> <b>{{result}}</b>
    </div>
     
     <script src="app.js"></script>
