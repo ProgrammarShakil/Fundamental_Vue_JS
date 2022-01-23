@@ -10,15 +10,11 @@
 <body>
 
     <div id="app">
-      <input type="text" v-model="newSkill.name">
-      <button @click="addSkill">Add Skill</button>
-      <ul style="list-style-type: none;">
-        <li @click="removeSkill" v-for="(skill, index) in skills" :key="name">
-          <!-- :key will give us perfect result - its need to take "unique name or anything" -->
-          {{index + 1}} {{skill.name}} ({{skill.experience}}) 
-          <!-- if i write just skill //{{skill}} ({{skill.experience}})// it will show object - it will be good for debugging -->
-        </li>
-      </ul>
+      <input type="text" v-model="mobile" placeholder="Enter 11 Digit Mobile Num">
+      <!-- // watch String value -->
+      <input type="text" v-model="name.firstName" placeholder="Enter First Name">
+      <!-- <input type="text" v-model="name.lastName" placeholder="Enter Last Name"> -->
+      <!-- // watch Object value - Nested Property -->
    </div>
     
     <script src="app.js"></script>
