@@ -13,7 +13,8 @@
       <input type="text" v-model="newSkill.name">
       <button @click="addSkill">Add Skill</button>
       <ul style="list-style-type: none;">
-        <li @click="removeSkill" v-for="(skill, index) in skills">
+        <li @click="removeSkill" v-for="(skill, index) in skills" :key="name">
+          <!-- :key will give us perfect result - its need to take "unique name or anything" -->
           {{index + 1}} {{skill.name}} ({{skill.experience}}) 
           <!-- if i write just skill //{{skill}} ({{skill.experience}})// it will show object - it will be good for debugging -->
         </li>
