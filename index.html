@@ -10,11 +10,14 @@
 <body>
 
     <div id="app">
-      <input type="text" v-model="background">
-      <input type="color" v-model="background">
-      <div :style="{backgroundColor: background}">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, consequatur! Atque, quaerat iste cupiditate ipsa beatae illo, veritatis dignissimos consectetur amet laborum laboriosam dolores magnam consequuntur repudiandae accusantium et aliquid.
-      </div>
+      <input type="text" v-model="newSkill.name">
+      <button @click="addSkill">Add Skill</button>
+      <ul style="list-style-type: none;">
+        <li @click="removeSkill" v-for="(skill, index) in skills">
+          {{index + 1}} {{skill.name}} ({{skill.experience}}) 
+          <!-- if i write just skill //{{skill}} ({{skill.experience}})// it will show object - it will be good for debugging -->
+        </li>
+      </ul>
    </div>
     
     <script src="app.js"></script>
