@@ -10,11 +10,16 @@
 <body>
 
     <div id="app">
-      <input type="text" v-model="mobile" placeholder="Enter 11 Digit Mobile Num">
-      <!-- // watch String value -->
-      <input type="text" v-model="name.firstName" placeholder="Enter First Name">
-      <!-- <input type="text" v-model="name.lastName" placeholder="Enter Last Name"> -->
-      <!-- // watch Object value - Nested Property -->
+      <input type="text" v-model="name.firstName" placeholder="Enter first name">
+      <input type="text" v-model="name.lastName" placeholder="Enter last name">
+
+      <!-- <p>{{firstName()}}</p>     // methods--> 
+      
+      <!-- <p>{{firstName}}</p>       // computed-->
+
+      <p>{{name.Fullname}}</p>       <!-- watch  -->
+      
+
    </div>
     
     <script src="app.js"></script>
