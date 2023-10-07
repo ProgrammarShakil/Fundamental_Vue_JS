@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div>{{name}}</div>
+    <div><button @click="increment()">Click</button></div>
+    <div>{{ $store.state.bookList }}</div>
   </div>
 </template>
 
@@ -11,8 +12,15 @@ export default {
       name: "shakil islam",
     };
   },
+
+  methods: {
+   
+  },
 };
 </script>
 
 <style>
+.w-100-custom {
+  width: 100%;
+}
 </style>
