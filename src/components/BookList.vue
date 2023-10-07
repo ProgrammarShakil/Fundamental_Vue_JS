@@ -1,23 +1,34 @@
 <template>
   <div>
-    <div>{{ studentFullName }}</div>
+    <div>{{ demoPosts }}</div>
     <div>{{ $store.state.bookList }}</div>
   </div>
 </template>
 
 <script>
-import {computed, ref} from 'vue'
+import { onMounted, computed, ref } from "vue";
 export default {
- setup(){
-  const studentFirstName = ref('Shakil')
-  const studentLastName = ref('Islam')
+  setup() {
+    const studentFirstName = ref("Shakil");
+    const studentLastName = ref("Islam");
 
-  const studentFullName = computed(()=> {
-    return `${studentFirstName.value} ${studentLastName.value}`
-  })
-  return {studentFullName}
- }
-}
+    const demoPosts = ref([]);
+
+    const studentFullName = computed(() => {
+      return `${studentFirstName.value} ${studentLastName.value}`;
+    });
+
+    onMounted(() => {
+      fetch("https://jsonplaceholder.typicode.com/todos/1")
+        .then((response) => response.json())
+        .then((data) => {
+          demoPosts.value = data
+        });
+    });
+
+    return { demoPosts, studentFullName };
+  },
+};
 </script>
 
 <style>
