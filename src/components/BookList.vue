@@ -1,14 +1,17 @@
 <template>
   <div>
-    <div><button @click="increment()">Click</button></div>
+    <div>{{ studentName }}</div>
     <div>{{ $store.state.bookList }}</div>
   </div>
 </template>
 
 <script>
+import {ref} from 'vue'
 export default {
  setup(){
-  console.log('setup');
+  const studentName = ref('Shakil Islam')
+
+  return {studentName}
  }
 }
 </script>
