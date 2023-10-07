@@ -1,17 +1,21 @@
 <template>
   <div>
-    <div>{{ studentName }}</div>
+    <div>{{ studentFullName }}</div>
     <div>{{ $store.state.bookList }}</div>
   </div>
 </template>
 
 <script>
-import {ref} from 'vue'
+import {computed, ref} from 'vue'
 export default {
  setup(){
-  const studentName = ref('Shakil Islam')
+  const studentFirstName = ref('Shakil')
+  const studentLastName = ref('Islam')
 
-  return {studentName}
+  const studentFullName = computed(()=> {
+    return `${studentFirstName.value} ${studentLastName.value}`
+  })
+  return {studentFullName}
  }
 }
 </script>
