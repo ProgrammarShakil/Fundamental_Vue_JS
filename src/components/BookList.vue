@@ -7,16 +7,10 @@
 
 <script>
 export default {
-  data() {
-    return {
-      name: "shakil islam",
-    };
-  },
-
-  methods: {
-   
-  },
-};
+ setup(){
+  console.log('setup');
+ }
+}
 </script>
 
 <style>
