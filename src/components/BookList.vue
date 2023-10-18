@@ -1,16 +1,26 @@
 <template>
   <div>
-    <div>{{ firstName }}</div>
-    <div>{{ lastName }}</div>
+    <button @click="callDemoPosts()">Call Demo Posts</button>
+    <div>{{ demoPosts }}</div>
   </div>
 </template>
 
 <script>
-import {stateData} from "../reactive/stateData"; //naming import
+import { stateData } from "../reactive/stateData";
 export default {
   setup() {
-    let { firstName, lastName } = stateData(); //destructuring
-    return {firstName, lastName}
+    const { demoPosts } = stateData();
+
+    function callDemoPosts() {
+      fetch("https://jsonplaceholder.typicode.com/todos/1")
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+          demoPosts.value = data;
+        });
+    }
+
+    return {callDemoPosts, demoPosts}
   },
 };
 </script>
