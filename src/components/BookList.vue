@@ -1,37 +1,16 @@
 <template>
   <div>
-    <!-- <button @click="callDemoPosts()">Call Demo Posts</button>
-    <div>{{ demoPosts }}</div>
-    <div>{{ $store.state.bookList }}</div> -->
-    <div>{{ state.firstName }}</div>
-    <div>{{ state.lastName }}</div>
+    <div>{{ firstName }}</div>
+    <div>{{ lastName }}</div>
   </div>
 </template>
 
 <script>
-import { reactive, computed } from "vue";
+import {stateData} from "../reactive/stateData"; //naming import
 export default {
   setup() {
-
-    const state=reactive({
-      firstName: 'Shakil',
-      lastName: 'islam',
-      fullName:computed(()=>{
-        return `${state.firstName} ${state.lastName}`
-      })
-    })
-
-    // const demoPosts = ref([]);
-
-    // function callDemoPosts(){
-    //   fetch("https://jsonplaceholder.typicode.com/todos/1")
-    //     .then((response) => response.json())
-    //     .then((data) => {
-    //       demoPosts.value = data
-    //     });
-    // }
-
-    return { state };
+    let { firstName, lastName } = stateData(); //destructuring
+    return {firstName, lastName}
   },
 };
 </script>
